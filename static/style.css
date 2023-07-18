@@ -1,0 +1,155 @@
+html {
+    font-family: Lato,sans-serif;
+    
+}
+
+*,*::after,*::before {
+    box-sizing: inherit;
+}
+body {
+    
+    box-sizing: border-box; 
+}
+
+
+.navbar {
+    max-width: 640px;
+    margin: 3rem auto;
+    display: flex;
+    justify-content:space-between;
+    padding: 0 1.5rem;
+    font-size: 1.5rem;
+
+}
+.navbar__brand {
+    display: flex;
+    align-items: center;
+
+}
+.brand__text {
+    margin-left: 1rem;
+}
+main {
+    max-width: 450px;
+    margin: 3rem auto;
+}
+footer {
+    max-width: 640px;
+    margin: 3rem auto;
+}
+.navbar__navigation {
+    display: flex;
+    margin-right: 2rem;
+    
+    
+}
+.navbar__link {
+    color: #5c6b70
+}
+.navbar__navigation-item {
+    list-style-type: none;
+    margin-left: 2rem;
+    color: #5c6b70;
+}
+
+a{
+    text-decoration: none;
+}
+
+.footer__content{
+display: flex;
+justify-content: space-between;
+}
+
+.right {
+    display: flex;
+justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__column {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.form-input {
+    width: 100%;
+}
+.form__label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.form__textarea {
+    width: inherit;
+    font-size: 1rem;
+    padding:0.75rem 1.25rem;
+    border: none;
+    background-color: rgb(227, 243, 246);
+    margin-bottom: 1rem;
+    
+}
+.form__submit {
+    background-color: lightblue;
+    font-size: 1rem;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 1.25rem;  
+    color: white;
+}
+
+.form__submit:hover {
+    background-color: rgb(109, 214, 233);
+}
+
+.entry {
+    margin-top: 3rem;
+}
+
+.entry__title {
+    display: inline ;
+    font-size: 1rem;
+}
+.entry__time {
+    color: #5c6b70;
+}
+
+.entry__content {
+    font-size: 0.75rem; 
+    line-height: 150%;
+}
+
+
+.footer {
+    color: white !important;
+    min-height: 40px;
+    /* background-color: #323f43; */
+    padding: 2.5rem 0;
+    margin-top: 3rem;
+    border-top: 4px solid black;
+    font-size: 0.75rem;
+    
+}
+
+.footer .left {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .right {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}

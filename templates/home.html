@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar__brand">
+            <img src="{{ url_for('static',filename="microblog-logo.svg") }}" alt="logo">
+            
+            <p class="brand__text">Microblog</p>
+        </div>
+         <ul class="navbar__navigation">
+            <li class="navbar__navigation-item"><a href="#" class="navbar__link">Recent</a></li>
+            <li class="navbar__navigation-item"><a href="#" class="navbar__link">Calendar</a></li>
+         </ul>
+         
+    </header>
+    <main>
+        <section>
+            <h1>Add a new entry</h1>
+            <div>
+                <form class="form" action="{{ url_for('home') }}" method="POST">
+                    <div class="form-input">
+                        <div>
+                            <label for="entry" class="form__label"> Sample:</label>
+                        </div>
+                        <textarea type="textarea" class="form__textarea" name="content" id="entry"></textarea>
+                    </div>
+                        <button type="submit" class="form__submit">Add an Entry</button>
+                    
+                </form>
+            </div>
+        </section>
+        <section>
+            <h1>Recent Posts</h1>
+        </section>
+        <article class="entry">
+            {% for post in posts%}
+                <div>
+                    <h2 class="entry__title">{{post.content|truncate(10,true)  }}</h2>
+                    <time class="entry__time" datetime="24-10-2024">{{post.date}}</time>
+                </div>
+                <p class="entry__content">
+                    {{ post.content }}
+                </p>
+                {% endfor %}
+        </article> 
+    </main>
+    
+</body>
+<footer class="footer">
+    <div class="footer__content">
+        <section class="left">
+            <a href="#" class="footer__item">Made by Harish</a>
+            <a href="#" class="footer__item">check out my other projects</a>
+        </section>
+        <section class="right">
+            <div class="footer__column">
+                <a href="#" class="footer__item">Recent</a>
+                <a href="#" class="footer__item">Calender</a>
+            </div>
+            <div class="footer__column">
+                <a href="#" class="footer__item">About</a>
+                <a href="#" class="footer__item">How was it made</a>
+            </div>
+        </section>
+    </div>
+</footer>
+</html>
